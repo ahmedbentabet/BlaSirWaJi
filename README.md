@@ -235,3 +235,9 @@ Main orchestration endpoint. Accepts a target document name and GPS coordinates,
 ## 👥 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Project Team
+
+- Abderrahmane Oukemmou
+- Mohamed El Halouat
+- Ahmed Bentabet
