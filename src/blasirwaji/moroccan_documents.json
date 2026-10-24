@@ -1,0 +1,363 @@
+{
+  "metadata": {
+    "country": "Morocco",
+    "currency": "MAD",
+    "language_primary": "ar",
+    "language_secondary": "fr",
+    "title": "دليل الوثائق الإدارية المغربية - BlaSirWaJi",
+    "description": "قائمة شاملة للوثائق الإدارية الأكثر طلباً في المغرب، تشمل الرسوم بالدرهم، مدة المعالجة، الإدارة المعنية، والشروط المسبقة.",
+    "total_documents": 18,
+    "last_updated": "2025"
+  },
+  "documents": [
+    {
+      "id": "cnie",
+      "name_ar": "بطاقة التعريف الوطنية الإلكترونية",
+      "name_fr": "Carte Nationale d'Identité Electronique (CNIE)",
+      "category": "الهوية والحالة المدنية",
+      "price_mad": 75,
+      "duration": "من 7 إلى 15 يوماً",
+      "duration_days_estimate": 10,
+      "is_instant": false,
+      "administration_office": "المديرية العامة للأمن الوطني (DGSN) / الدائرة الأمنية",
+      "google_maps_query": "DGSN Commissariat Police Maroc",
+      "prerequisites": [
+        "عقد الازدياد (أقل من 3 أشهر)",
+        "شهادة السكنى (أو شهادة التسجيل القنصلي للمغاربة بالخارج)",
+        "4 صور فوتوغرافية حديثة وفق المعايير الرسمية",
+        "شهادة العمل أو شهادة مدرسية أو دبلوم لمطابقة المهنة"
+      ],
+      "validity": "10 سنوات للبالغين (7 سنوات لمن هم أقل من 12 سنة)",
+      "notes": "الرسوم 75 درهماً للبالغين و50 درهماً للقاصرين دون سن 12 سنة."
+    },
+    {
+      "id": "acte_naissance",
+      "name_ar": "عقد الازدياد (رسم الولادة)",
+      "name_fr": "Extrait d'acte de naissance",
+      "category": "الهوية والحالة المدنية",
+      "price_mad": 2,
+      "duration": "فوري / في نفس اليوم",
+      "duration_days_estimate": 0,
+      "is_instant": true,
+      "administration_office": "قسم الحالة المدنية بالملحقة الإدارية أو الجماعة",
+      "google_maps_query": "Commune Urbaine Etat Civil Maroc",
+      "prerequisites": [
+        "الدفتر العائلي (Livret de famille)",
+        "بطاقة التعريف الوطنية للأب أو الأم أو صاحب الطلب"
+      ],
+      "validity": "3 أشهر لأغلب الإجراءات الإدارية",
+      "notes": "قيمة الرسوم 2 دراهم (طابع جبائي) ويمكن استخراجه أيضاً عبر بوابة watiqa.ma."
+    },
+    {
+      "id": "copie_integrale",
+      "name_ar": "النسخة الكاملة من رسم الولادة",
+      "name_fr": "Copie intégrale de l'acte de naissance",
+      "category": "الهوية والحالة المدنية",
+      "price_mad": 2,
+      "duration": "فوري إلى 24 ساعة",
+      "duration_days_estimate": 1,
+      "is_instant": true,
+      "administration_office": "مكتب الحالة المدنية لمكان الازدياد",
+      "google_maps_query": "Bureau Etat Civil Maroc",
+      "prerequisites": [
+        "الدفتر العائلي",
+        "بطاقة التعريف الوطنية للنائب الشرعي أو المعني بالأمر"
+      ],
+      "validity": "3 أشهر",
+      "notes": "تتضمن جميع البيانات الهامشية وتطلب خصيصاً للزواج وجواز السفر والتجنيس."
+    },
+    {
+      "id": "certificat_residence",
+      "name_ar": "شهادة السكنى",
+      "name_fr": "Certificat de résidence",
+      "category": "الشواهد الإدارية ومحل الإقامة",
+      "price_mad": 0,
+      "duration": "24 إلى 48 ساعة",
+      "duration_days_estimate": 2,
+      "is_instant": false,
+      "administration_office": "الملحقة الإدارية / المقاطعة الحضرية (أو الدرك الملكي في القرى)",
+      "google_maps_query": "Annexe Administrative المقاطعة Maroc",
+      "prerequisites": [
+        "نسخة من بطاقة التعريف الوطنية",
+        "عقد الكراء أو شهادة الملكية أو التزام بالإيواء مصادق عليه",
+        "آخر فاتورة استهلاك الماء أو الكهرباء باسم صاحب الطلب",
+        "شهادة العمل أو السجل التجاري أو شهادة متابعة الدراسة"
+      ],
+      "validity": "3 أشهر",
+      "notes": "تسلم مجاناً في المقاطعات الحضرية ومصالح الأمن الوطني."
+    },
+    {
+      "id": "casier_judiciaire",
+      "name_ar": "نسخة من السجل العدلي (بطاقة رقم 3)",
+      "name_fr": "Extrait du casier judiciaire (Bulletin n°3)",
+      "category": "العدالة والشؤون القضائية",
+      "price_mad": 0,
+      "duration": "24 إلى 48 ساعة (أو فوري عبر الإنترنت)",
+      "duration_days_estimate": 1,
+      "is_instant": false,
+      "administration_office": "المحكمة الابتدائية (أو عبر البوابة الإلكترونية casierjudiciaire.justice.gov.ma)",
+      "google_maps_query": "Tribunal de Premiere Instance Maroc",
+      "prerequisites": [
+        "نسخة من بطاقة التعريف الوطنية",
+        "عقد الازدياد لمواليد المغرب"
+      ],
+      "validity": "3 أشهر",
+      "notes": "مجاني تماماً. يمكن تقديمه إلكترونياً وسحبه من المحكمة الابتدائية الأقرب إليك."
+    },
+    {
+      "id": "passeport",
+      "name_ar": "جواز السفر البيومتري",
+      "name_fr": "Passeport biométrique",
+      "category": "وثائق السفر الدولية",
+      "price_mad": 500,
+      "duration": "من 10 إلى 15 يوماً",
+      "duration_days_estimate": 12,
+      "is_instant": false,
+      "administration_office": "الملحقة الإدارية / الباشوية / العمالة (Préfecture)",
+      "google_maps_query": "Prefecture Service Passeport Maroc",
+      "prerequisites": [
+        "استمارة طلب جواز السفر معبأة وموقعة عبر passeport.ma",
+        "بطاقة التعريف الوطنية الإلكترونية سارية المفعول",
+        "صورتان فوتوغرافيتان حديثتان ملونتان بخلفية بيضاء أو رمادية فاتحة",
+        "توصيل أداء واجبات التمبر الإلكتروني (500 درهم)"
+      ],
+      "validity": "5 سنوات للبالغين",
+      "notes": "رسوم التمبر الإلكتروني 500 درهم وتؤدى عبر البنوك أو التطبيقات المصرفية أو وكالات تحويل الأموال."
+    },
+    {
+      "id": "permis_conduire",
+      "name_ar": "رخصة السياقة",
+      "name_fr": "Permis de conduire",
+      "category": "النقل والمواصلات",
+      "price_mad": 450,
+      "duration": "30 إلى 45 يوماً (بعد النجاح في الامتحان)",
+      "duration_days_estimate": 35,
+      "is_instant": false,
+      "administration_office": "الوكالة الوطنية للسلامة الطرقية (NARSA)",
+      "google_maps_query": "Centre Immatriculation NARSA Maroc",
+      "prerequisites": [
+        "نسخة من بطاقة التعريف الوطنية",
+        "شهادة طبية للأهلية البدنية والذهنية مصادق عليها",
+        "شهادة السكنى (إذا تغير العنوان عن البطاقة)",
+        "ملف الترشيح واجتياز ساعات التدريب في مؤسسة تعليم السياقة",
+        "أداء رسوم التسجيل والامتحان والتمبر الإداري"
+      ],
+      "validity": "سنتان للرخصة المؤقتة، ثم 10 سنوات للرخصة الدائمة",
+      "notes": "450 درهم تمثل الرسوم الإدارية للدولة، وتضاف إليها تكلفة مدرسة تعليم السياقة (بين 2500 و3500 درهم)."
+    },
+    {
+      "id": "livret_famille",
+      "name_ar": "الدفتر العائلي (دفتر الحالة المدنية)",
+      "name_fr": "Livret de famille",
+      "category": "الهوية والحالة المدنية",
+      "price_mad": 50,
+      "duration": "3 إلى 5 أيام عمل",
+      "duration_days_estimate": 4,
+      "is_instant": false,
+      "administration_office": "مكتب الحالة المدنية لمحل سكنى الزوج",
+      "google_maps_query": "Bureau Etat Civil Commune Maroc",
+      "prerequisites": [
+        "نسخة مصادق عليها من عقد الزواج",
+        "النسخة الكاملة من رسم ولادة الزوج والزوجة",
+        "نسخ من بطاقة التعريف الوطنية للزوجين",
+        "صورة شمسية للزوج"
+      ],
+      "validity": "دائم (يتم تحديثه عند ولادة كل طفل)",
+      "notes": "يسلّم للزوج أو للأم المطلقة أو الأرملة الحاضنة."
+    },
+    {
+      "id": "certificat_celibat",
+      "name_ar": "شهادة العزوبية / عدم الزواج",
+      "name_fr": "Certificat de célibat",
+      "category": "الشواهد الإدارية والأحوال الشخصية",
+      "price_mad": 0,
+      "duration": "24 إلى 48 ساعة",
+      "duration_days_estimate": 2,
+      "is_instant": false,
+      "administration_office": "الملحقة الإدارية / المقاطعة لمحل الإقامة",
+      "google_maps_query": "Annexe Administrative Maroc",
+      "prerequisites": [
+        "نسخة من بطاقة التعريف الوطنية",
+        "عقد الازدياد أو النسخة الكاملة",
+        "شهادة السكنى",
+        "تصريح بالشرف وشاهدان (2) مع بطاقاتهم الوطنية للشهادة بالإدارة"
+      ],
+      "validity": "3 أشهر",
+      "notes": "ضرورية لملف إبرام عقد الزواج أو لأغراض قنصلية خارج المغرب."
+    },
+    {
+      "id": "acte_mariage",
+      "name_ar": "عقد الزواج (رسم النكاح)",
+      "name_fr": "Acte de mariage",
+      "category": "الأسرة والقضاء",
+      "price_mad": 350,
+      "duration": "7 إلى 15 يوماً",
+      "duration_days_estimate": 10,
+      "is_instant": false,
+      "administration_office": "مكتب العدول وقسم قضاء الأسرة بالمحكمة الابتدائية",
+      "google_maps_query": "Tribunal de Famille قسم قضاء الاسرة Maroc",
+      "prerequisites": [
+        "إذن بالتوثيق من قاضي الأسرة المكلف بالزواج",
+        "النسخة الكاملة من رسم ولادة كل من الزوجين",
+        "شهادة العزوبية أو الخطوبة لكلا الطرفين",
+        "شهادة طبية قبل الزواج لكل من الزوج والزوجة",
+        "شهادة السكنى أو نسخة بطاقة التعريف الوطنية",
+        "حضور ولي أمر الزوجة (إن وجد) والشاهدين العدلين"
+      ],
+      "validity": "دائم",
+      "notes": "الرسوم تتراوح بين 300 و500 درهم تشمل الرسوم القضائية وأتعاب العدول المنصوص عليها قانوناً."
+    },
+    {
+      "id": "carte_grise",
+      "name_ar": "البطاقة الرمادية للسيارة (شهادة التسجيل)",
+      "name_fr": "Carte grise (Certificat d'immatriculation)",
+      "category": "النقل والمواصلات",
+      "price_mad": 600,
+      "duration": "15 إلى 30 يوماً (مع تسليم وصل مؤقت فوري)",
+      "duration_days_estimate": 20,
+      "is_instant": false,
+      "administration_office": "مركز تسجيل السيارات / وكالة NARSA",
+      "google_maps_query": "Centre Immatriculation des Vehicules Maroc",
+      "prerequisites": [
+        "عقد البيع والشراء مصادق عليه (أو بطاقة الشراء للسيارات الجديدة)",
+        "البطاقة الرمادية الأصلية مع محضر الفحص التقني الدوري ساري المفعول",
+        "نسخة من بطاقة التعريف الوطنية للمشتري",
+        "شهادة أداء الضرائب والرسوم الخاصة بالمركبات",
+        "محضر المعاينة (Identification) من مركز الفحص التقني"
+      ],
+      "validity": "صالحة طالما المركبة باسم المالك المسجل",
+      "notes": "الرسوم تختلف حسب القوة الجبائية للمركبة (Chevaux fiscaux) وتبدأ من 600 درهم للسيارات الاقتصادية."
+    },
+    {
+      "id": "certificat_propriete",
+      "name_ar": "شهادة الملكية العقارية",
+      "name_fr": "Certificat de propriété foncière",
+      "category": "العقار والمحافظة العقارية",
+      "price_mad": 100,
+      "duration": "فوري (إلكترونياً) أو 24 إلى 48 ساعة بالمحافظة",
+      "duration_days_estimate": 1,
+      "is_instant": true,
+      "administration_office": "الوكالة الوطنية للمحافظة العقارية والمسح العقاري (ANCFCC)",
+      "google_maps_query": "Conservation Fonciere ANCFCC Maroc",
+      "prerequisites": [
+        "رقم الرسم العقاري (Numéro du Titre Foncier) أو المطلب",
+        "نسخة من بطاقة التعريف الوطنية لصاحب الطلب",
+        "أداء الرسم الإداري (100 درهم)"
+      ],
+      "validity": "صالحة لشهر واحد من تاريخ إصدارها للإجراءات البنكية والرسمية",
+      "notes": "يمكن استخراجها وتحميلها بصيغة PDF موقعة إلكترونياً على مدار 24/7 عبر portal.ancfcc.gov.ma."
+    },
+    {
+      "id": "attestation_fiscale",
+      "name_ar": "شهادة أداء الضرائب والرسوم (إبراء ذمة ضريبية)",
+      "name_fr": "Attestation fiscale / Quitus fiscal",
+      "category": "الضرائب والمالية العامة",
+      "price_mad": 0,
+      "duration": "24 إلى 72 ساعة",
+      "duration_days_estimate": 2,
+      "is_instant": false,
+      "administration_office": "القباضة المالية (TGR) أو المديرية الإقليمية للضرائب (DGI)",
+      "google_maps_query": "Tresorerie Generale du Royaume Maroc",
+      "prerequisites": [
+        "نسخة من بطاقة التعريف الوطنية",
+        "رقم التعريف الضريبي أو أرقام ضريبة السكن والخدمات الجماعية",
+        "أداء جميع المستحقات الضريبية المتأخرة"
+      ],
+      "validity": "السنة المالية الجارية أو 3 أشهر",
+      "notes": "مجانية ومتاحة للتحميل الفوري عبر بوابة tgr.gov.ma أو dgi.gov.ma للمسجلين."
+    },
+    {
+      "id": "certificat_medical",
+      "name_ar": "الشهادة الطبية (قدرة بدنية / رخصة سياقة / عمل)",
+      "name_fr": "Certificat médical d'aptitude",
+      "category": "الصحة والسلامة",
+      "price_mad": 100,
+      "duration": "فوري (نفس وقت الزيارة)",
+      "duration_days_estimate": 0,
+      "is_instant": true,
+      "administration_office": "المركز الصحي العمومي أو عيادة طبيب معتمد",
+      "google_maps_query": "Centre de Sante Urbain Maroc",
+      "prerequisites": [
+        "بطاقة التعريف الوطنية",
+        "فحص سريري (قياس الضغط، النظر، الفحوصات العامة)",
+        "ملف المطبوع الرسمي (في حالة رخصة السياقة أو الزواج)"
+      ],
+      "validity": "من شهر إلى 3 أشهر حسب الغرض",
+      "notes": "بالمراكز الصحية العمومية رسوم رمزية (أو مجانية)، وبالعيادات الخاصة بين 100 و150 درهماً."
+    },
+    {
+      "id": "affiliation_cnss",
+      "name_ar": "شهادة الانخراط والتصريح بالأجور (CNSS)",
+      "name_fr": "Attestation d'affiliation et déclaration de salaire",
+      "category": "الحماية الاجتماعية والتشغيل",
+      "price_mad": 0,
+      "duration": "فوري (عبر تطبيق الهاتف أو الموقع)",
+      "duration_days_estimate": 0,
+      "is_instant": true,
+      "administration_office": "الصندوق الوطني للضمان الاجتماعي (وكالة CNSS أو تطبيق Ma CNSS)",
+      "google_maps_query": "Agence CNSS Maroc",
+      "prerequisites": [
+        "رقم التسجيل في الصندوق الوطني للضمان الاجتماعي",
+        "بطاقة التعريف الوطنية"
+      ],
+      "validity": "شهر واحد إلى 3 أشهر",
+      "notes": "مجانية تماماً وتسحب فورياً عبر تطبيق الهاتف Ma CNSS برقم سري."
+    },
+    {
+      "id": "attestation_travail",
+      "name_ar": "شهادة العمل وبيان الأجرة",
+      "name_fr": "Attestation de travail et bulletin de paie",
+      "category": "العمل والمهن",
+      "price_mad": 0,
+      "duration": "24 إلى 48 ساعة",
+      "duration_days_estimate": 2,
+      "is_instant": false,
+      "administration_office": "إدارة الموارد البشرية بالمؤسسة أو المشغّل",
+      "google_maps_query": "Societe Entreprise Maroc",
+      "prerequisites": [
+        "طلب من الأجير للمشغل",
+        "عقد العمل أو قضاء فترة التجربة"
+      ],
+      "validity": "3 أشهر",
+      "notes": "تسلم إلزامياً ومجاناً من طرف المشغل طبقاً لمقتضيات مدونة الشغل المغربية."
+    },
+    {
+      "id": "legalisation_signature",
+      "name_ar": "المصادقة على صحة الإمضاء ومطابقة النسخ للأصل",
+      "name_fr": "Légalisation de signature et certification conforme",
+      "category": "الشواهد الإدارية ومحل الإقامة",
+      "price_mad": 0,
+      "duration": "فوري / على الفور",
+      "duration_days_estimate": 0,
+      "is_instant": true,
+      "administration_office": "الملحقة الإدارية أو مصلحة تصحيح الإمضاءات بالجماعة الحضرية",
+      "google_maps_query": "Bureau Legalisation المقاطعة Maroc",
+      "prerequisites": [
+        "الوثيقة الأصلية والنسخ المراد مطابقتها للأصل",
+        "حضور صاحب التوقيع شخصياً",
+        "بطاقة التعريف الوطنية الإلكترونية سارية المفعول"
+      ],
+      "validity": "دائم (أو حسب مدة صلاحية الوثيقة الموقعة)",
+      "notes": "مجانية لجميع المواطنين طبقاً لأحكام القانون رقم 55.19 المتعلق بتبسيط المساطر الإدارية."
+    },
+    {
+      "id": "certificat_vie",
+      "name_ar": "شهادة الحياة الفردية أو الجماعية",
+      "name_fr": "Certificat de vie (individuel ou collectif)",
+      "category": "الهوية والحالة المدنية",
+      "price_mad": 0,
+      "duration": "فوري / في نفس اليوم",
+      "duration_days_estimate": 0,
+      "is_instant": true,
+      "administration_office": "مكتب الحالة المدنية بالملحقة الإدارية",
+      "google_maps_query": "Annexe Administrative Etat Civil Maroc",
+      "prerequisites": [
+        "الحضور الشخصي للمعني بالأمر",
+        "بطاقة التعريف الوطنية",
+        "الدفتر العائلي (للشهادة الجماعية للأبناء)"
+      ],
+      "validity": "3 أشهر (تطلب بانتظام لصناديق التقاعد والتعاضديات)",
+      "notes": "تسلم مجاناً في مكتب الحالة المدنية التابع لمحل الإقامة."
+    }
+  ]
+}
