@@ -1,17 +1,17 @@
 [project]
 name = "blasirwaji"
 version = "0.1.0"
-description = "Add your description here"
+description = "AI-powered Moroccan administrative document routing and cost estimation assistant"
 readme = "README.md"
+requires-python = ">=3.10"
 authors = [
-    { name = "ahmedbentabet", email = "61090548+ahmedbentabet@users.noreply.github.com" }
+    { name = "Ahmed Ben Tabet", email = "61090548+ahmedbentabet@users.noreply.github.com" }
 ]
-requires-python = ">=3.14"
 dependencies = [
-    "fastapi>=0.162.0",
-    "google-genai>=2.33.0",
-    "python-dotenv>=1.2.4",
-    "uvicorn>=0.54.0",
+    "fastapi>=0.115.0",
+    "google-genai>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "uvicorn>=0.30.0",
 ]
 
 [project.scripts]
