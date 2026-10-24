@@ -1,59 +1,58 @@
-# 🏛️ BlaSirWaJi (بلا سير واجي)
+# 🏛️ BlaSirWaJi
 
-> **دليلك الإداري الذكي للإجراءات والوثائق المغربية — مدعوم بالذكاء الاصطناعي**
+> **Autonomous Moroccan Administrative Document Routing & Cost Estimation Engine**
 > 
-> *End-to-End Moroccan Administrative Routing & Cost Estimation Assistant powered by Google Gemini/Gemma AI, FastAPI, and React + Tailwind CSS.*
+> *A full-stack, AI-powered assistant designed to eliminate bureaucratic back-and-forth by computing recursive document prerequisite trees, official government fees in MAD, processing times, and real-time Google Maps driving directions.*
 
 ---
 
-## 🌟 نبذة عن المشروع (About BlaSirWaJi)
+## 🌟 Overview & Problem Statement
 
-المواطن المغربي غالباً ما يواجه تعقيدات إدارية تُعرف شعبياً بـ **"سير واجي"** (كثرة التنقل بين الإدارات لاكتشاف وثائق ناقصة، رسوم غير متوقعة، أو التوجه إلى المصلحة الخاطئة).
+In Morocco, citizens navigating public administrative procedures often suffer from what is colloquially known as **"Sir Wa Ji"** (*سير واجي* — endless back-and-forth between public offices due to missing sub-documents, unexpected stamp fees, or visiting the wrong municipal annex).
 
-تطبيق **"بلا سير واجي"** يحل هذه المعضلة جذرياً:
-بمجرد إدخال اسم أي وثيقة أو رخصة إدارية وتحديد موقعك الجغرافي (GPS)، يقوم الذكاء الاصطناعي تلقائياً بتحليل:
-1. **سلسلة الوثائق والشروط المسبقة التكرارية** من الجذور (مثل: عقد الازدياد، شهادة السكنى، الصور، التمبر) حتى الوثيقة النهائية.
-2. **التكلفة الإجمالية الدقيقة بالدرهم المغربي (MAD)**.
-3. **المدة الزمنية المتوقعة لكل خطوة**.
-4. **الإدارة المختصة وموقعها الجغرافي الأقرب إليك** مع زر مباشر لخرائط جوجل (Google Maps).
-
----
-
-## ✨ المميزات الرئيسية (Key Features)
-
-- **🧠 محرك ذكاء اصطناعي مستقل (Autonomous AI Engine)**:
-  - لا يعتمد على قاعدة بيانات جامدة، بل يستنتج الإجراءات والشروط والرسوم القانونية لأي وثيقة، حتى لو كانت رخصة نادرة أو غير مدرجة مسبقاً (مثل: *رخصة حفر بئر، رخصة فتح مقهى، رخصة الصيد، شهادات الاستثمار*).
-- **📍 توجيه جغرافي ذكي (Geolocation Routing)**:
-  - استخدام إحداثيات المستخدم (Latitude / Longitude) لربطه بالمقاطعة، دائرة الشرطة، المحكمة الابتدائية، أو الوكالة الحضرية الأقرب إليه.
-- **💰 احتساب الرسوم الرسمية (MAD Cost Breakdown)**:
-  - تفصيل دقيق لرسوم كل وثيقة والتنبر الجبائي (Timbre) واحتساب التكلفة الإجمالية للملف كاملاً.
-- **🎨 واجهة مستخدم عصرية وفاخرة (Modern Dark Glassmorphism)**:
-  - دعم كامل وأصيل للغة العربية وللاتجاه من اليمين إلى اليسار (RTL) مع خطوط Cairo و Inter.
-  - شريط بحث ذكي مع إكمال تلقائي (Autocomplete) للوثائق المغربية الأكثر شيوعاً.
-  - بطاقات خطوات تفاعلية قابلة للتوسيع (Collapsible Step Cards).
-- **🛡️ وضع عدم الاتصال الحتمي (Offline Fallback Guarantee)**:
-  - في حال انقطاع الإنترنت أو عدم توفر مفتاح API، يتحول التطبيق تلقائياً إلى خوارزمية DAG حتمية تضمن عدم توقف الخدمة.
+**BlaSirWaJi** solves this challenge through an intelligent pair of AI reasoning and GPS geolocation:
+1. **Recursive Sub-Document Chains**: Autonomously determines all prerequisite documents from root requirements (e.g., birth records, photographs, residence certificates, tax clearances) up to the target document.
+2. **Real Official Moroccan Fees (MAD)**: Provides accurate breakdowns of administrative stamps (*Timbre*), fees, and total file costs in Moroccan Dirhams.
+3. **Turn-by-Turn Car Driving Directions**: Features a direct **Google Maps Car Navigation** button (`travelmode=driving`) routing the user straight to the closest competent administrative office.
+4. **Geolocation Office Matching**: Recommends the specific municipal arrondissement, police district (DGSN), court of first instance, or regional agency matching the citizen's GPS coordinates.
 
 ---
 
-## 🏗️ البنية التقنية (Architecture & Tech Stack)
+## ✨ Key Features
+
+- **🧠 Autonomous AI Reasoning Engine**:
+  - Dynamically investigates and resolves *any* document, permit, or certificate — including unlisted, commercial, agricultural, and specialized procedures (e.g., *well drilling permits, cafe operating licenses, marine fishing authorizations, building renovations*).
+- **🚗 Turn-by-Turn Google Maps Car Directions**:
+  - One-click navigation button calculating driving routes directly to the relevant municipal annex or administrative office from the user's current location.
+- **📍 Geolocation-Aware Routing**:
+  - Automatically captures GPS coordinates (`Latitude`, `Longitude`) via the browser Geolocation API with graceful fallbacks.
+- **💰 Comprehensive Cost Calculation**:
+  - Aggregates fees across all sequential steps, computing the exact total expenditure in Moroccan Dirhams (MAD).
+- **🎨 Modern Dark Glassmorphic Interface**:
+  - Built with React 18 and Tailwind CSS, featuring smooth micro-animations, autocomplete dropdowns, collapsible cards, and full RTL layout support.
+- **🛡️ Deterministic Offline Fallback**:
+  - Seamlessly falls back to an internal recursive DAG resolver if no API key is set or during network disconnections, guaranteeing zero downtime.
+
+---
+
+## 🏗️ Architecture & Tech Stack
 
 ```
 BlaSirWaJi/
-├── src/blasirwaji/             # 🐍 Backend (FastAPI + Google GenAI)
-│   ├── main.py                 # FastAPI application & CORS configuration
-│   ├── llm_router.py           # AI reasoning engine & multi-model orchestrator
+├── src/blasirwaji/             # Python Backend (FastAPI + Google GenAI)
+│   ├── main.py                 # FastAPI application, lifespan & CORS
+│   ├── llm_router.py           # Multi-model AI reasoning engine
 │   ├── tools.py                # Administrative data helpers & coordinate tools
-│   └── moroccan_documents.json # Seed dataset of 18 standard Moroccan procedures
-├── frontend/                   # ⚛️ Frontend (React 18 + Vite + Tailwind CSS)
+│   └── moroccan_documents.json # Comprehensive dataset of 18 standard procedures
+├── frontend/                   # Frontend (React 18 + Vite + Tailwind CSS)
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── SearchBox.jsx       # Search input with RTL autocomplete & GPS
-│   │   │   ├── ResultsPanel.jsx    # Step cards, cost banner & Google Maps links
+│   │   │   ├── SearchBox.jsx       # Search input with autocomplete & GPS detection
+│   │   │   ├── ResultsPanel.jsx    # Step cards, cost banner & Car Directions button
 │   │   │   └── LoadingSpinner.jsx  # Glassmorphic pulse loader
-│   │   ├── App.jsx                 # Main layout & state coordinator
-│   │   └── index.css               # Design system & Tailwind utilities
-│   ├── vite.config.js          # Vite config with backend proxy (/api)
+│   │   ├── App.jsx                 # Application layout & state management
+│   │   └── index.css               # Design system & Tailwind styling utilities
+│   ├── vite.config.js          # Vite configuration with backend proxy (/api)
 │   └── package.json            # Frontend dependencies
 ├── .env.example                # Environment variables template
 ├── pyproject.toml              # Python project configuration (uv / pip)
@@ -61,113 +60,116 @@ BlaSirWaJi/
 └── README.md                   # Project documentation
 ```
 
-### التقنيات المستخدمة:
-- **الواجهة الأمامية (Frontend)**: React 18, Vite, Tailwind CSS, Lucide / Heroicons SVGs.
-- **الخادم الخلفي (Backend)**: Python 3.12+, FastAPI, Uvicorn, Google GenAI SDK (`google-genai`), Pydantic, python-dotenv.
-- **مدير الحزم (Package Management)**: `uv` (Ultra-fast Python package manager) & `npm`.
+### Technologies:
+- **Frontend**: React 18, Vite, Tailwind CSS, Lucide/Heroicons SVG components.
+- **Backend**: Python 3.12+, FastAPI, Uvicorn, Google GenAI SDK (`google-genai`), Pydantic, python-dotenv.
+- **Package Management**: `uv` (high-performance Python package manager) and `npm`.
 
 ---
 
-## 🔑 كيفية الحصول على مفتاح Gemini API (Get Gemini API Key)
+## 🔑 How to Get a Google Gemini API Key
 
-يعتمد التطبيق على واجهة برمجة تطبيقات Google GenAI / Gemini لتشغيل نماذج الذكاء الاصطناعي:
+The application utilizes Google GenAI / Gemini models for dynamic administrative reasoning:
 
-1. توجه إلى منصة **[Google AI Studio](https://aistudio.google.com/app/apikey)** وسجل دخولك بحساب Google.
-2. اضغط على الزر الأزرق **"Create API Key"** (إنشاء مفتاح API).
-3. اختر مشروعاً موجوداً أو أنشئ مشروعاً جديداً بنقرة واحدة (**"Create key in new project"**).
-4. انسخ المفتاح المتولد (يبدأ عادة بـ `AIzaSy...` أو المعرف المخصص لحسابك).
-5. احتفظ بالمفتاح سرياً ولا ترفعه أبداً إلى GitHub (ملف `.env` محمي تلقائياً عبر `.gitignore`).
+1. Visit **[Google AI Studio](https://aistudio.google.com/app/apikey)** and sign in with your Google account.
+2. Click the **"Create API Key"** button.
+3. Select an existing Google Cloud project or choose **"Create key in new project"**.
+4. Copy the generated API key.
+5. Create your `.env` file and paste the key:
+   ```bash
+   cp .env.example .env
+   ```
+   Add your key inside `.env`:
+   ```env
+   GEMINI_API_KEY=your_copied_api_key_here
+   ```
+   *(Note: `.env` is listed in `.gitignore` and is never committed to GitHub).*
 
 ---
 
-## ⚡ التشغيل السريع (Local Setup & Installation)
+## ⚡ Quickstart Guide (Local Setup & Run)
 
-### المتطلبات المسبقة (Prerequisites)
-- **Python**: الإصدار 3.12 أو أحدث.
-- **Node.js**: الإصدار 18 أو أحدث (مع `npm`).
-- **uv** (اختياري لكن مفضل للسرعة): أو استخدام `pip` التقليدي.
+### Prerequisites
+- **Python**: Version 3.12 or newer.
+- **Node.js**: Version 18 or newer (with `npm`).
+- **uv** (recommended for speed) or standard `pip`.
 
 ---
 
-### 1️⃣ إعداد المستودع والمتغيرات البيئية (Clone & Env Setup)
+### Step 1: Clone the Repository & Configure Environment
 
 ```bash
-# استنساخ المستودع
 git clone https://github.com/your-username/BlaSirWaJi.git
 cd BlaSirWaJi
 
-# إنشاء ملف البيئة من النموذج
 cp .env.example .env
 ```
 
-افتح ملف `.env` وضع مفتاحك:
-```env
-GEMINI_API_KEY=your_copied_api_key_here
-```
+Edit `.env` to include your `GEMINI_API_KEY`.
 
 ---
 
-### 2️⃣ إعداد وتشغيل الخادم الخلفي (Backend Setup)
+### Step 2: Backend Setup & Launch
 
-#### الطريقة أ: باستخدام `uv` (الموصى به)
+#### Option A: Using `uv` (Recommended)
 ```bash
-# تثبيت التبعيات ومزامنة البيئة الافتراضية
+# Sync dependencies in a dedicated virtual environment
 uv sync
 
-# تشغيل الخادم
+# Launch the FastAPI backend server
 uv run uvicorn blasirwaji.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-#### الطريقة ب: باستخدام `pip` و `venv` العادي
+#### Option B: Using standard `pip` & `venv`
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate  # على Linux/macOS/WSL
-# أو .venv\Scripts\activate على Windows
+source .venv/bin/activate  # On Linux/macOS/WSL
+# or .venv\Scripts\activate on Windows
 
 pip install -e .
 uvicorn blasirwaji.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-الخادم الخلفي يعمل الآن على: **`http://localhost:8000`**  
-توثيق Swagger التفاعلي متاح على: **`http://localhost:8000/docs`**
+- **Backend API**: `http://localhost:8000`
+- **Interactive Swagger Documentation**: `http://localhost:8000/docs`
 
 ---
 
-### 3️⃣ إعداد وتشغيل الواجهة الأمامية (Frontend Setup)
+### Step 3: Frontend Setup & Launch
 
-في نافذة طرفية ثانية (Terminal):
+In a second terminal window:
 
 ```bash
 cd frontend
 
-# تثبيت حزم npm
+# Install dependencies
 npm install
 
-# تشغيل خادم التطوير
+# Start Vite development server
 npm run dev
 ```
 
-الواجهة الأمامية متاحة الآن على: **`http://localhost:5173`**  
-*(خادم Vite يقوم تلقائياً بإعادة توجيه طلبات `/api` إلى خادم FastAPI على المنفذ 8000)*.
+- **Frontend Application**: `http://localhost:5173`
+- *(The Vite dev server automatically proxies all `/api` requests to `http://localhost:8000`)*.
 
 ---
 
-### 4️⃣ بناء النسخة النهائية للإنتاج (Production Build)
+### Step 4: Production Build (Optional)
 
 ```bash
 cd frontend
 npm run build
 ```
-سيتم توليد الحزمة المحسنة في مجلد `frontend/dist/`.
+Optimized static bundles will be compiled to `frontend/dist/`.
 
 ---
 
-## 📡 توثيق نقطة النهاية البرمجية (API Reference)
+## 📡 API Reference
 
 ### `POST /api/route-document`
-النقطة المركزية لمعالجة وتوجيه الوثيقة عبر الذكاء الاصطناعي.
+Main orchestration endpoint. Accepts a target document name and GPS coordinates, returning the ordered procedural roadmap.
 
-#### Request Body (JSON):
+#### Request Body (JSON)
 ```json
 {
   "document_name": "جواز السفر",
@@ -176,66 +178,65 @@ npm run build
 }
 ```
 
-#### Response Body (JSON):
+#### Response Body (JSON)
 ```json
 {
   "steps": [
     {
-      "document_name": "شهادة السكنى",
-      "prerequisites": ["نسخة من بطاقة التعريف", "فاتورة الماء أو الكهرباء"],
-      "administration_office": "الدائرة الأمنية أو قيادة الدرك الملكي",
+      "document_name": "شهادة السكنى (Residence Certificate)",
+      "prerequisites": ["CNIE Copy", "Water/Electricity Bill"],
+      "administration_office": "Police District or Gendarmerie",
       "price_mad": 0,
-      "processing_time": "24 إلى 48 ساعة",
+      "processing_time": "24 to 48 hours",
       "google_maps_query": "Commune Urbaine Rabat",
-      "nearest_location": "الملحقة الإدارية حسان، الرباط"
+      "nearest_location": "Annexe Administrative Hassan, Rabat"
     },
     {
-      "document_name": "البطاقة الوطنية للتعريف الإلكترونية (CNIE)",
-      "prerequisites": ["عقد الازدياد", "شهادة السكنى", "صور فوتوغرافية"],
-      "administration_office": "المديرية العامة للأمن الوطني (DGSN)",
+      "document_name": "بطاقة التعريف الوطنية (CNIE)",
+      "prerequisites": ["Birth Certificate", "Residence Certificate", "Photos"],
+      "administration_office": "Direction Générale de la Sûreté Nationale (DGSN)",
       "price_mad": 75,
-      "processing_time": "من 7 إلى 15 يوماً",
+      "processing_time": "7 to 15 days",
       "google_maps_query": "DGSN Commissariat Police Maroc",
-      "nearest_location": "المديرية العامة للأمن الوطني، الرباط"
+      "nearest_location": "DGSN Document Service, Rabat"
     },
     {
-      "document_name": "تمبر جواز السفر الإلكتروني",
-      "prerequisites": ["رقم بطاقة التعريف الوطنية"],
-      "administration_office": "القباضة المالية أو بوابة Wajibi",
+      "document_name": "تمبر جواز السفر الإلكتروني (Passport Stamp Duty)",
+      "prerequisites": ["National ID Number"],
+      "administration_office": "Treasury or Wajibi Payment Portal",
       "price_mad": 500,
-      "processing_time": "فوري",
+      "processing_time": "Instant",
       "google_maps_query": "Tresorerie Generale du Royaume",
-      "nearest_location": "القباضة المالية، الرباط"
+      "nearest_location": "Trésorerie Générale, Rabat"
     },
     {
-      "document_name": "جواز السفر البيومتري",
-      "prerequisites": ["البطاقة الوطنية", "التمبر الإلكتروني", "استمارة الطلب"],
-      "administration_office": "الملحقة الإدارية / العمالة",
+      "document_name": "جواز السفر البيومتري (Biometric Passport)",
+      "prerequisites": ["Valid CNIE", "Electronic Stamp Receipt", "Application Form"],
+      "administration_office": "Administrative Annexe / Prefecture",
       "price_mad": 0,
-      "processing_time": "10 إلى 15 يوماً",
+      "processing_time": "10 to 15 days",
       "google_maps_query": "Prefecture Service Passeport",
-      "nearest_location": "عمالة الرباط"
+      "nearest_location": "Prefecture of Rabat"
     }
   ],
   "total_cost_mad": 575,
-  "total_time_summary": "من 15 إلى 25 يوماً تقريباً"
+  "total_time_summary": "Approximately 15 to 25 business days"
 }
 ```
 
 ---
 
-## 🛠️ أوامر الاختصار (Makefile Shortcuts)
+## 🛠️ Makefile Shortcuts
 
-لراحتك، يمكنك استخدام الأوامر التالية من المجلد الرئيسي:
+For convenience, you can execute common operations from the project root:
 
-- `make install`: تثبيت تبعيات الخادم والواجهة.
-- `make run`: تشغيل خادم FastAPI في وضع التطوير.
-- `make dev-frontend`: تشغيل خادم تطوير Vite.
-- `make clean`: حذف البيئات المؤقتة ومجلدات الكاش.
+- `make install`: Install both backend and frontend dependencies.
+- `make run`: Run the FastAPI backend in development mode with auto-reload.
+- `make dev-frontend`: Run the Vite frontend development server.
+- `make clean`: Remove cached bytecode and temporary virtual environment artifacts.
 
 ---
 
-## 👥 المساهمون والترخيص (License & Authors)
+## 👥 License
 
-- **المشروع**: تم تطويره خصيصاً للهاكاثون الوطني لتبسيط الإجراءات الإدارية المغربية.
-- **الترخيص**: مرخص تحت رخصة [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
