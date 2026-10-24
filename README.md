@@ -43,7 +43,6 @@ BlaSirWaJi/
 │   ├── main.py                 # FastAPI application, lifespan & CORS
 │   ├── llm_router.py           # Multi-model AI reasoning engine
 │   ├── tools.py                # Administrative data helpers & coordinate tools
-│   └── moroccan_documents.json # Comprehensive dataset of 18 standard procedures
 ├── frontend/                   # Frontend (React 18 + Vite + Tailwind CSS)
 │   ├── src/
 │   │   ├── components/

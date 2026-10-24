@@ -1,7 +1,7 @@
 """
 tools.py - Moroccan document database and tool implementations for BlaSirWaJi.
 
-Provides:
+Provides fallback document data and helper functions:
 - get_document_requirements(doc_name): Returns prerequisites, price in MAD, processing time,
   administration office, and Google Maps query.
 - find_nearest_office(office_type, lat, lng): Returns the nearest administration office.
@@ -10,11 +10,10 @@ from __future__ import annotations
 
 import json
 import logging
-import pathlib
 
 logger = logging.getLogger(__name__)
 
-# Base fallback database
+# Fallback database used for offline mode or network disconnection
 _DOCUMENT_DB: dict[str, dict] = {
     "عقد الازدياد": {
         "prerequisites": ["بطاقة التعريف الوطنية", "شهادة التسجيل في الحالة المدنية"],
@@ -95,56 +94,16 @@ _OFFICE_DB: dict[str, str] = {
     "المركز الصحي العمومي أو عيادة طبيب معتمد": "المركز الصحي أكدال، شارع التقدم، الرباط",
     "المركز الصحي القريب": "المركز الصحي أكدال، شارع التقدم، الرباط",
     "الملحقة الإدارية المحلية": "المقاطعة الإدارية حسان، شارع الرياض، الرباط",
-    "المقاطعة الإدارية المحلية": "المقاطعة الإدارية حسان، شارع الرياض، الرباط",
 }
-
-
-def _load_documents_json() -> None:
-    """Load and merge documents from moroccan_documents.json if available."""
-    json_candidates = [
-        pathlib.Path(__file__).parent / "moroccan_documents.json",
-        pathlib.Path(__file__).parent.parent.parent / "moroccan_documents.json",
-    ]
-    for p in json_candidates:
-        if p.exists():
-            try:
-                data = json.loads(p.read_text(encoding="utf-8"))
-                for doc in data.get("documents", []):
-                    name_ar = doc.get("name_ar", "").strip()
-                    if not name_ar:
-                        continue
-                    item = {
-                        "prerequisites": doc.get("prerequisites", []),
-                        "price_mad": doc.get("price_mad", 0),
-                        "processing_time": doc.get("duration", "فوري"),
-                        "administration_office": doc.get("administration_office", "المقاطعة الإدارية"),
-                        "google_maps_query": doc.get("google_maps_query", "المقاطعة الإدارية المغرب"),
-                    }
-                    _DOCUMENT_DB[name_ar] = item
-                    # Also register clean alias without parentheses (e.g. "عقد الازدياد" from "عقد الازدياد (رسم الولادة)")
-                    if "(" in name_ar:
-                        short_name = name_ar.split("(")[0].strip()
-                        if short_name and short_name not in _DOCUMENT_DB:
-                            _DOCUMENT_DB[short_name] = item
-                logger.info(f"Loaded {len(_DOCUMENT_DB)} document entries into DB.")
-                break
-            except Exception as e:
-                logger.warning(f"Could not load {p}: {e}")
-
-
-# Initialize database from JSON file
-_load_documents_json()
 
 
 def get_document_requirements(doc_name: str) -> str:
     """
     Returns prerequisites, price in MAD, processing time, and Google Maps query for a document.
     """
-    # 1. Exact match
     if doc_name in _DOCUMENT_DB:
         data = _DOCUMENT_DB[doc_name]
     else:
-        # 2. Substring match
         matched_key = None
         for key in _DOCUMENT_DB:
             if key != "default" and (key in doc_name or doc_name in key):
